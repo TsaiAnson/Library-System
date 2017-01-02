@@ -1,0 +1,8 @@
+Room-A null room R1 5 100000 false null
+Room-B null room R2 5 100000 false null
+Room-C null room R3 5 100000 false null
+Room-D null room R4 5 100000 false null
+Room-E null room R5 5 100000 false null
+Room-F null room R6 5 100000 false null
+Room-G null room R7 5 100000 false null
+Room-H null room R8 5 100000 false null

@@ -1,0 +1,8 @@
+iPad-1 null ipad I1 5 600 false null
+iPad-2 null ipad I2 5 600 false null
+iPad-3 null ipad I3 5 600 false null
+iPad-4 null ipad I4 5 600 true null
+iPad-5 null ipad I5 5 600 false null
+iPad-6 null ipad I6 5 600 false null
+iPad-7 null ipad I7 5 600 false null
+iPad-8 null ipad I8 5 600 false null

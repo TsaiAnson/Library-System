@@ -1,0 +1,8 @@
+Projector-1 null projector P1 5 1000 false null
+Projector-2 null projector P2 5 1000 false null
+Projector-3 null projector P3 5 1000 false null
+Projector-4 null projector P4 5 1000 false null
+Projector-5 null projector P5 5 1000 false null
+Projector-6 null projector P6 5 1000 false null
+Projector-7 null projector P7 5 1000 false null
+Projector-8 null projector P8 5 1000 false null

@@ -25,31 +25,72 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * Object that represents the Library. Also contains the GUI interface.
+ * @author Yuan-Cheng Tsai
+ */
+
 public class Library 
 {
+    /** ItemList BOOKS that holds the ITEM Books. */
 	private ItemList books = new ItemList();
+
+    /** ItemList VIDEOS that holds the ITEM videos. */
 	private ItemList videos = new ItemList();
+
+    /** ItemList DESKTOPS that holds the ITEM desktops. */
 	private ItemList desktops = new ItemList();
+
+    /** ItemList LAPTOPS that holds the ITEM laptops. */
 	private ItemList laptops = new ItemList();
+
+    /** ItemList IPADS that holds the ITEM ipads. */
 	private ItemList ipads = new ItemList();
+
+    /** ItemList PROJECTORS that holds the ITEM projectors. */
 	private ItemList projectors = new ItemList();
+
+    /** ItemList TEXTBOOKS that holds the ITEM textbooks. */
 	private ItemList textbooks = new ItemList();
+
+    /** ItemList ROOMS that holds the ITEM rooms. */
 	private ItemList rooms = new ItemList();
+
+    /** ItemList CKOUT that holds the ITEMS that are checked-out. */
 	private ItemList ckout = new ItemList();
+
+    /** ItemList OVDUE that holds the ITEMS that are overdue. */
 	private ItemList ovdue = new ItemList();
+
+    /** ItemList STUDENTS that holds the STUDENT objects. */
 	private ItemList students = new ItemList();
+
+    /** ItemList FACULTY that holds the FACULTY objects. */
 	private ItemList faculty = new ItemList();
-	private ListNode types = new ListNode("books", new ListNode("videos", new ListNode("desktops", new ListNode("laptops", new ListNode("ipads", new ListNode("projectors", new ListNode("textbooks", new ListNode("rooms", null))))))));
-	private ListNode typesA = new ListNode("books", new ListNode("videos", new ListNode("desktops", new ListNode("laptops", new ListNode("ipads", new ListNode("projectors", new ListNode("textbooks", new ListNode("rooms", new ListNode("faculty", new ListNode("students", null))))))))));
-	
-	
+
+    /** ListNode TYPES that holds the regular selections in the main library interface. */
+	private ListNode types = new ListNode("books", new ListNode("videos",
+            new ListNode("desktops", new ListNode("laptops",
+                    new ListNode("ipads", new ListNode("projectors",
+                            new ListNode("textbooks", new ListNode("rooms", null))))))));
+
+    /** ListNode TYPESA that holds the add selections in the main library interface. */
+	private ListNode typesA = new ListNode("books", new ListNode("videos",
+            new ListNode("desktops", new ListNode("laptops",
+                    new ListNode("ipads", new ListNode("projectors",
+                            new ListNode("textbooks", new ListNode("rooms",
+                                    new ListNode("faculty",
+                                            new ListNode("students", null))))))))));
+
+    /** Method to start the Library GUI interface. */
 	public void Start() throws NumberFormatException, IOException, ParseException
 	{
 		ReadFiles();
 		Home();
 		
 	}
-	
+
+    /** Creates a HOME screen where the main controls for the library reside. */
 	@SuppressWarnings("serial")
 	public void Home()
 	{
@@ -171,7 +212,8 @@ public class Library
 	    
 	    H.setVisible(true);
 	}
-	
+
+    /** Creates and shows the frame that holds the first CHECKOUT stage. */
 	@SuppressWarnings("serial")
 	public void CheckOut1()
 	{
@@ -276,7 +318,9 @@ public class Library
     the text fields to be static in order for the actionListener to be able to grab the text*/
     JTextField ddday = new JTextField();
     JTextField ddyear = new JTextField();
-	
+
+
+    /** Creates and shows the frame that holds the second CHECKOUT stage. */
 	@SuppressWarnings({ "serial" })
 	public void CO2(int FoS, int iP, int tp)
 	{
@@ -455,7 +499,8 @@ public class Library
 	    
 	    CO2.setVisible(true);
 	}
-	
+
+    /** Creates and shows the frame that holds the RETURN functions. */
 	@SuppressWarnings("serial")
 	public void Return(int CoO, int index)
 	{
@@ -681,7 +726,8 @@ public class Library
 	    R.add(wR);
 	    R.setVisible(true);
 	}
-	
+
+    /** Method that checks if there are ITEMS that are overdue. */
 	public void Check()
 	{
 		Date curr = new Date();
@@ -713,7 +759,9 @@ public class Library
 	JTextField classA = new JTextField();
 	JTextField feeA = new JTextField();
 	JTextField lfeeA = new JTextField();
-	
+
+
+    /** Creates and shows a FRAME that holds the ADD functions. */
 	@SuppressWarnings("serial")
 	public void Add()
 	{
@@ -856,7 +904,8 @@ public class Library
 	    A.add(wA);
 	    A.setVisible(true);
 	    }
-	
+
+    /** Method that reads the TEXTFILES that store the Library's information. */
 	public void  ReadFiles() throws NumberFormatException, IOException, ParseException
 	{
 		BufferedReader Breader = new BufferedReader(new FileReader("books.txt"));
@@ -979,7 +1028,8 @@ public class Library
 		}
 		Sreader.close();
 	}
-	
+
+    /** Method that stores the Library's information on TEXTFILES. */
 	public void SaveFiles() throws FileNotFoundException, UnsupportedEncodingException
 	{
 		PrintWriter Bwriter = new PrintWriter("books.txt", "UTF-8");

@@ -188,6 +188,7 @@ public class Library
 				} catch (UnsupportedEncodingException e) {
 					e.printStackTrace();
 				}
+				System.exit(0);
             }
         };
 	    hCloseB.addActionListener(acthCloseB);
